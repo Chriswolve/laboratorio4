@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <TabHost android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TabWidget android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@android:id/tabs" />
+
+            <FrameLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@android:id/tabcontent" >
+
+
+                <LinearLayout android:id="@+id/tab1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="30px"
+                    android:paddingLeft="50px"
+                    android:paddingRight="50px">
+
+                    <LinearLayout
+                        android:layout_marginTop="30px"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+
+
+                        <EditText
+                            android:layout_marginTop="0px"
+                            android:hint="Nombre contacto"
+                            android:textSize="18dp"
+                            android:layout_weight="5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_buscarc"
+                            android:layout_gravity="center_horizontal" />
+                        <Button
+
+                            android:layout_width="90px"
+                            android:layout_height="90px"
+                            android:layout_marginLeft="10px"
+                            android:background="@drawable/search"
+                            android:id="@+id/btn_buscarc"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="buscarContacto"
+
+                            />
+
+                        <Button
+                            android:layout_marginLeft="10px"
+                            android:layout_width="90px"
+                            android:layout_height="90px"
+                            android:background="@drawable/add"
+                            android:id="@+id/btn_contacts"
+                            android:onClick="addContacto"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                    </LinearLayout>
+
+
+
+                    <ListView
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_marginTop="40px"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/list_contacts"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout android:id="@+id/tab2"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="30px"
+                    android:paddingLeft="50px"
+                    android:paddingRight="50px">
+
+                    <LinearLayout
+                        android:layout_marginTop="30px"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        >
+
+
+
+
+
+                        <Button
+
+                            android:layout_marginLeft="10px"
+                            android:layout_width="90px"
+                            android:layout_height="90px"
+                            android:background="@drawable/add"
+                            android:id="@+id/btn_tasks"
+                            android:onClick="addTarea"
+                            android:layout_gravity="center_horizontal"
+                            />
+
+                    </LinearLayout>
+
+
+                    <ListView
+                        android:layout_marginTop="40px"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/list_tareas"
+                        android:layout_gravity="center_horizontal" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </TabHost>
+
+</LinearLayout>
